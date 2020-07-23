@@ -13,7 +13,7 @@ function add() {
         navbar.appendChild(section);
 
     }
-    ;
+
 }
 
 
@@ -25,8 +25,6 @@ function scrollClick() {
 
     });
 }
-
-
 
 
 //Scroll to the top of the page
@@ -47,12 +45,12 @@ $(document).ready(() => {
 
     });
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         let windscroll = $(window).scrollTop();
-        if(windscroll >= 100) {
+        if (windscroll >= 100) {
             $("nav").addClass("sticky");
             $("section").each(function (i) {
-                if($(this).position().top <= windscroll) {
+                if ($(this).position().top <= windscroll) {
                     $("li.active").removeClass("active");
                     $("li").eq(i).addClass("active");
                 }
